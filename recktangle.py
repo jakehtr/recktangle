@@ -58,7 +58,7 @@ def recktangle(word, width, height):
 if __name__ == '__main__':
     while True:
         try:
-            word = input('Enter a word (leave blank to quit): ')
+            word = input('Enter a word (leave blank to quit): ').strip()
             if word == '':
                 break
             width = int(input('Enter width of rectangle: '))
