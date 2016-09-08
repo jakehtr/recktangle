@@ -16,6 +16,9 @@ def recktangle(word, width, height):
     top_rows = list()
     final_reckt = str()
 
+    if len(word) == 1:
+        return '\n{}\n'.format(word)
+
     # creating the vertical rows
     for j in range(len(word) - 2):
         new_row = str()
@@ -50,7 +53,7 @@ def recktangle(word, width, height):
         final_reckt += '{}{}\n'.format(top_rows[k % 2], ''.join(left_right_))
     final_reckt += top_rows[height % 2]  # add bottom row
 
-    print('\n{}\n'.format(final_reckt))
+    return '\n{}\n'.format(final_reckt)
 
 if __name__ == '__main__':
     while True:
@@ -60,6 +63,6 @@ if __name__ == '__main__':
                 break
             width = int(input('Enter width of rectangle: '))
             height = int(input('Enter height of rectangle: '))
-            recktangle(word, width, height)
+            print(recktangle(word, width, height))
         except ValueError:
             print('Invalid input. Try again.')
