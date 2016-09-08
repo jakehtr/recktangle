@@ -50,7 +50,16 @@ def recktangle(word, width, height):
         final_reckt += '{}{}\n'.format(top_rows[k % 2], ''.join(left_right_))
     final_reckt += top_rows[height % 2]  # add bottom row
 
-    print(final_reckt)
+    print('\n{}\n'.format(final_reckt))
 
 if __name__ == '__main__':
-    recktangle('fathom', 4, 4)
+    while True:
+        try:
+            word = input('Enter a word (leave blank to quit): ')
+            if word == '':
+                break
+            width = int(input('Enter width of rectangle: '))
+            height = int(input('Enter height of rectangle: '))
+            recktangle(word, width, height)
+        except ValueError:
+            print('Invalid input. Try again.')
