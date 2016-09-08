@@ -27,8 +27,10 @@ def recktangle(word, width, height):
                                        word[-2 - j]) * divide(width, 2)
         if width % 2 == 0:
             v_row += '{}'.format(word[j + 1])
+        else:
+            v_row = v_row.rstrip()
 
-        v_rows.append('\n{}'.format(v_row.strip()))
+        v_rows.append('\n{}'.format(v_row))
 
     # creating the horizontal rows
     for i in range(2):
