@@ -1,7 +1,7 @@
 #! usr/bin/env python3
 
 """
-recktangle.py - Creates a rectangle made up of a given word!
+recktangle.py - Creates a rectangle made up of a given word.
 """
 
 
