@@ -57,14 +57,18 @@ def recktangle(word, width, height):
 
     return '\n{}\n'.format(final_reckt)
 
-if __name__ == '__main__':
+
+def main():
     while True:
         try:
             word = input('Enter a word (leave blank to quit): ').strip()
             if word == '':
-                break
+                return
             width = int(input('Enter width of rectangle: '))
             height = int(input('Enter height of rectangle: '))
             print(recktangle(word, width, height))
         except ValueError:
             print('Invalid input. Try again.')
+
+if __name__ == '__main__':
+    main()
